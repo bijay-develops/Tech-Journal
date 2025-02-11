@@ -1,5 +1,5 @@
 {
-  "name": "props-drilling",
+  "name": "prop-drilling",
   "private": true,
   "version": "0.0.0",
   "type": "module",
