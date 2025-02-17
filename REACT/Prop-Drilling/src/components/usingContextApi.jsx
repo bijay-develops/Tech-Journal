@@ -4,6 +4,7 @@ const UserContext = createContext();
 
 const UsingContextApi =() => {
     const userName = 'Bijay';
+    
     return(
         <UserContext.Provider value={userName}>
             <Parent />
@@ -11,10 +12,18 @@ const UsingContextApi =() => {
     );
 }
 
-const Parent =() =>{}
+const Parent =() =>{
+    return <Child />;
+};
 
-const Child =() => {}
+const Child =() => {
+    return <Grandchild />
+}
 
-const Grandchild =() => {}
+const Grandchild =() => {
+    const userName = useContext(UserContext);       //accessing context value 
+    return <p>Hello, {userName}!</p>;
+
+}
 
 export default UsingContextApi;

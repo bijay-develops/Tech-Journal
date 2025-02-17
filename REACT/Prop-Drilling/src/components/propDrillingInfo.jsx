@@ -26,7 +26,6 @@ function Grandchild({ message }) {
 export default function PropDrillingInfo() {
     return (
         <div>
-            <h1>Parent</h1>
             <Parent />
         </div>
     );
