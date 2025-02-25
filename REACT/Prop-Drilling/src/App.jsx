@@ -4,12 +4,14 @@ import { use, useState } from 'react'
 import PropDrillingInfo from './components/propDrillingInfo'
 import PropDrillingExplaination from './components/propDrillingExplanation'
 import UsingContextApi from './components/usingContextApi'
+import UsingCustomHooks from './components/usingCustomHooks'
 
 function App() {
 
 const [explain, setExplain] = useState(false);
 const [context, setContext] = useState(false);
 const [parent, setParent] = useState(false);
+const [custom, setCustom] = useState(false);
 
   return (
     <>
@@ -48,9 +50,20 @@ const [parent, setParent] = useState(false);
             context ? (
               <UsingContextApi />
             ):(
-              <button onClick={() => setContext(true)}>Using Context API</button>
+              <button onClick={() => setContext(true)}>1. Using Context API</button>
             )
         }
+      </div>
+
+<br></br>
+        <div>
+      {
+        custom ? (
+          <UsingCustomHooks />
+        ):(
+          <button onClick={() => setCustom(true)}>2. Using Custom Hooks</button>
+        )
+      }
       </div>
       
     </>
