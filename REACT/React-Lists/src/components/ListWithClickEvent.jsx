@@ -2,16 +2,16 @@ import React from 'react'
 
 const ListWithClickEvent = () => {
     const COMPANY = ["Ram", "Sham", "Hari"];
-    const handleClick = (COMPANY) => {
+    const handleClick = (COMPANY) => {  //For handling the click functionality
         alert(`You clicked on ${COMPANY}`);
     }
 
   return (
     <ul>
         {COMPANY.map((COMPANY) => (
-            <li key={COMPANY} onClick={() => handleClick(COMPANY)}>
+            <button key={COMPANY} onClick={() => handleClick(COMPANY)}>
                 {COMPANY}
-            </li>
+            </button>
         ))}
     </ul>
   )
