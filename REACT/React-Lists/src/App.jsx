@@ -6,11 +6,13 @@ import './App.css'
 import FruitList from './components/FruitList'
 import ListsWithObjects from './components/ListsWithObjects'
 import ConditionalRenderingInLists from './components/ConditionalRenderingInLists'
+import ListWithClickEvent from './components/ListWithClickEvent'
 
 function App() {
   const [items, setItems] = useState(false);
   const [users, setUserts] = useState(false);
   const [conditional, setConditional] = useState(false);
+  const [clickEvent, setClickEvent] = useState(false);
 
   return (
     <>
@@ -42,6 +44,16 @@ function App() {
             <ConditionalRenderingInLists />
           ):(
             <button onClick={() => setConditional(true)}>3. Conditional rendering in Lists</button>
+          )}
+        </div>
+
+        <br></br>
+
+        <div>
+          {clickEvent ? (
+            <ListWithClickEvent />
+          ):(
+            <button onClick={() => setClickEvent(true)}>4. List with Click Event</button>
           )}
         </div>
     </>
