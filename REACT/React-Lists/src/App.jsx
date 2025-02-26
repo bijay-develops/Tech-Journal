@@ -5,10 +5,12 @@ import './App.css'
 
 import FruitList from './components/FruitList'
 import ListsWithObjects from './components/ListsWithObjects'
+import ConditionalRenderingInLists from './components/ConditionalRenderingInLists'
 
 function App() {
   const [items, setItems] = useState(false);
   const [users, setUserts] = useState(false);
+  const [conditional, setConditional] = useState(false);
 
   return (
     <>
@@ -36,7 +38,11 @@ function App() {
 <br></br>
 
         <div>
-          {}
+          {conditional ? (
+            <ConditionalRenderingInLists />
+          ):(
+            <button onClick={() => setConditional(true)}>3. Conditional rendering in Lists</button>
+          )}
         </div>
     </>
   )
